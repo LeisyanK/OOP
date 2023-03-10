@@ -11,7 +11,7 @@ public class VendingMachineHotDrinks extends VendingMachine{
     }
 
     @Override
-    String getProduct(String name) {        // метод для вывода горячих напитков с названием name (переопределяем родительский)
+    String getProduct(String name) {
         for (HotDrinks hd : hotDrinksList) {
             if (hd.getName().contains(name)) return hd.getName() + ", " + hd.getPrice();
         }
