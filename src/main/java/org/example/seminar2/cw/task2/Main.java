@@ -1,9 +1,6 @@
 package org.example.seminar2.cw.task2;
 
-import java.util.ArrayDeque;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * 1. Интерфейс QueueBehaviour, который описывает логику очереди – помещение в/освобождение из очереди,
@@ -18,8 +15,11 @@ public class Main {
 //        List<Buyer> actors = new LinkedList<>();  // все посетители
 //        Queue<Buyer> actorsQueue = new ArrayDeque<>();  // все покупатели, которые встают в очередь
 
+//        Market market = new Market();   // запускаем работу магазина
+
         Human man1 = new Human();
         man1.name = "Ваня";
+
 
         Market market = new Market();
         market.acceptToMarket(man1);
@@ -31,5 +31,9 @@ public class Main {
         market.releaseFromMarket(man1);
         //market.update();
     }
+
+//    public void oneBuyer(){
+//
+//    }
 
 }
