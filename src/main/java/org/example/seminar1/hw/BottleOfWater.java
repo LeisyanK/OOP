@@ -2,12 +2,21 @@ package org.example.seminar1.hw;
 
 public class BottleOfWater extends Product {
 
-
+    // конструктор
+//    public BottleOfWater(){
+//        super.name = "name1";
+//    }
+//    private String name;
+//    private int price;
 
     public BottleOfWater(String name, int price) {
         super(name, price);
+//        this.name = name; // добавила вызов конструктора родителя
+//        this.price = price;
     }
-
+//    public BottleOfWater(){
+//        super();
+//    }
 
 
     @Override

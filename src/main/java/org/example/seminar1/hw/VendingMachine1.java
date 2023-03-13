@@ -7,7 +7,7 @@ public class VendingMachine1 extends VendingMachine {
     List<BottleOfWater> bottleOfWaters = new ArrayList<>();
 
     void initProduct(List<BottleOfWater> bottle) {
-
+//        this.products.add(products);
         this.bottleOfWaters = bottle;
     }
 
@@ -15,7 +15,7 @@ public class VendingMachine1 extends VendingMachine {
     @Override
     String getProduct(String name) {
         for (BottleOfWater p : bottleOfWaters) {
-            if (p.getName().contains(name)) return p.getName() + ", " + p.getPrice();
+            if (p.getName().contains(name)) return p.getName() + ", " + p.getPrice(); // return p.toString();
         }
         return new BottleOfWater("Нет бутылок воды", 0).toString();
     }
@@ -24,9 +24,9 @@ public class VendingMachine1 extends VendingMachine {
     String getProduct(String name, int maxPrice) {
         List<BottleOfWater> bottleOfWaters1 = new ArrayList<>();
         for (BottleOfWater p : bottleOfWaters) {
-            if (p.getName().contains(name) && p.getPrice() <= maxPrice)
+            if (p.getName().contains(name) && p.getPrice() <= maxPrice) //return p.getName() + ", " + p.getPrice(); // return p.toString();
                 bottleOfWaters1.add(p);
         }
-        return bottleOfWaters1.toString();
+        return bottleOfWaters1.toString(); //new BottleOfWater("Нет бутылок воды", 0).toString();
     }
 }
