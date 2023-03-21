@@ -3,7 +3,7 @@ package org.example.seminar4.hw;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VendingMachineHotDrinks extends VendingMachine {
+public class VendingMachineHotDrinks<B extends Product> extends VendingMachine {
     List<HotDrinks> hotDrinksList= new ArrayList<>();
 
     public VendingMachineHotDrinks(String name) {

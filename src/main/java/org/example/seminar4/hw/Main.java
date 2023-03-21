@@ -11,14 +11,14 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        VendingMachine1<Product> vendingMachine1 = (Product) new VendingMachine1<BottleOfWater>("Water");
+        VendingMachine1<BottleOfWater> vendingMachine1 = new VendingMachine1<>("Water");
         List<BottleOfWater> bw = new ArrayList<>(Arrays.asList(new BottleOfWater("pepsi", 42),
                 new BottleOfWater("sprite", 40), new BottleOfWater("sprite", 100),
                 new BottleOfWater("cola", 70)));
         vendingMachine1.initProduct(bw);
         System.out.println(vendingMachine1.getProduct("sprite", 50).toString());
 
-        VendingMachineHotDrinks<HotDrinks> hd = new VendingMachineHotDrinks<>();
+        VendingMachineHotDrinks<HotDrinks> hd = new VendingMachineHotDrinks<>("HotDrinks");
         List<HotDrinks> hotDrinksList = new ArrayList<>(Arrays.asList(new HotDrinks("chocolate", 50, 65),
                 new HotDrinks("coffee", 75, 65), new HotDrinks("hot coffee", 100, 95),
                 new HotDrinks("tea", 45, 70)));
