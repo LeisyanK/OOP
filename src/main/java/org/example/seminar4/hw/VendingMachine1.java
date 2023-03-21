@@ -3,13 +3,20 @@ package org.example.seminar4.hw;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VendingMachine1 extends VendingMachine {
+public class VendingMachine1<B extends Product> extends VendingMachine {
     List<BottleOfWater> bottleOfWaters = new ArrayList<>();
 
-    void initProduct(List<BottleOfWater> bottle) {
+    public VendingMachine1(String name) {
+        super(name);
+    }
+
+    @Override
+//    void initProduct(List<BottleOfWater> bottle) {
+    void initProduct(List bottle) {
 //        this.products.add(products);
         this.bottleOfWaters = bottle;
     }
+
 
 
     @Override

@@ -1,13 +1,25 @@
 package org.example.seminar4.hw;
 
-public abstract class VendingMachine <E>{
-    private E name;
+import java.util.ArrayList;
+import java.util.List;
 
-    public VendingMachine(E name) {
+public abstract class VendingMachine <T extends Product>{
+    private String name; // название автомата
+    List<T> vm;
+
+//    public VendingMachine(String name) {
+//        this.name = name;
+//    }
+    public VendingMachine(String name) {
         this.name = name;
+        this.vm = new ArrayList<>();
     }
+//    public VendingMachine(String name, List<T> vm) {
+//        this.name = name;
+//        this.vm = vm;
+//    }
 
-    //    abstract void initProduct(List<> products);
+    abstract void initProduct(List<T> products);
     abstract String getProduct(String name);
 
 }

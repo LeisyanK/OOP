@@ -6,7 +6,16 @@ import java.util.List;
 public class VendingMachineHotDrinks extends VendingMachine {
     List<HotDrinks> hotDrinksList= new ArrayList<>();
 
-    void initProduct(List<HotDrinks> hotDrinks) {
+    public VendingMachineHotDrinks(String name) {
+        super(name);
+    }
+
+//    void initProduct(List<HotDrinks> hotDrinks) {
+//        this.hotDrinksList = hotDrinks;
+//    }
+
+    @Override
+    void initProduct(List hotDrinks) {
         this.hotDrinksList = hotDrinks;
     }
 
