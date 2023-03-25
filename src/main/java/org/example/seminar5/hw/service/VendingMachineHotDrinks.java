@@ -3,24 +3,15 @@ package org.example.seminar5.hw.service;
 import org.example.seminar5.hw.model.HotDrinks;
 import org.example.seminar5.hw.model.Product;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class VendingMachineHotDrinks<T extends Product> implements VendingMachine {
-    List<HotDrinks> hotDrinksList= new ArrayList<>();
+    List<HotDrinks> hotDrinksList = new ArrayList<>();
 
-//    public VendingMachineHotDrinks(List<HotDrinks> hotDrinksList) {
-//        this.hotDrinksList = hotDrinksList;
-//    }
-
-        public VendingMachineHotDrinks() {
+    public VendingMachineHotDrinks() {
         super();
     }
-
-//    void initProduct(List<HotDrinks> hotDrinks) {
-//        this.hotDrinksList = hotDrinks;
-//    }
 
     @Override
     public void initProduct(List hotDrinks) {
@@ -35,10 +26,9 @@ public class VendingMachineHotDrinks<T extends Product> implements VendingMachin
         return new HotDrinks("Нет горячих напитков", 0, 0).toString();
     }
 
-    //    @Override
     public String getProduct(String name, int price, int temperature) {
-        List<HotDrinks> result= new ArrayList<>();
-        for (HotDrinks hd: hotDrinksList) {
+        List<HotDrinks> result = new ArrayList<>();
+        for (HotDrinks hd : hotDrinksList) {
             if (hd.getName().equals(name) && hd.getPrice() <= price && hd.getTemperature() == temperature) {
                 result.add(hd);
             }

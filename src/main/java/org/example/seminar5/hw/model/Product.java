@@ -1,11 +1,6 @@
 package org.example.seminar5.hw.model;
 
-/**
- * Реализуйте класс Товар, содержащий данные о товаре, и ТорговыйАвтомат, содержащий в себе методы initProducts
- * (List <Product>) сохраняющий в себе список исходных продуктов и getProduct(String name)
- */
-public abstract class Product{
-//    protected String name;
+public abstract class Product {
     protected String name;
     protected int price;
 

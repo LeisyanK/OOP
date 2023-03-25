@@ -1,17 +1,9 @@
 package org.example.seminar5.hw.model;
 
-import org.example.seminar5.hw.model.Product;
-
 public class BottleOfWater extends Product {
     public BottleOfWater(String name, int price) {
         super(name, price);
-//        this.name = name; // добавила вызов конструктора родителя
-//        this.price = price;
     }
-//    public BottleOfWater(){
-//        super();
-//    }
-
 
     @Override
     public String getName() {

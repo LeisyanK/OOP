@@ -1,7 +1,5 @@
 package org.example.seminar5.hw.model;
 
-import org.example.seminar5.hw.model.Product;
-
 public class HotDrinks extends Product {
     private int temperature;
 
