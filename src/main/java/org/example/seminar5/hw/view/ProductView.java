@@ -11,12 +11,12 @@ import java.util.List;
 
 public class ProductView {
      public static void clickButton(){
-         VendingMachineBottles<BottleOfWater> vendingMachine1 = new VendingMachineBottles<>();
-         List<BottleOfWater> bw = new ArrayList<>(Arrays.asList(new BottleOfWater("pepsi", 42),
+         VendingMachineBottles<BottleOfWater> bw = new VendingMachineBottles<>();
+         List<BottleOfWater> waterList = new ArrayList<>(Arrays.asList(new BottleOfWater("pepsi", 42),
                  new BottleOfWater("sprite", 40), new BottleOfWater("sprite", 100),
                  new BottleOfWater("cola", 70)));
-         vendingMachine1.initProduct(bw);
-         System.out.println(vendingMachine1.getProduct("sprite", 50).toString());
+         bw.initProduct(waterList);
+         System.out.println(bw.getProduct("sprite", 50).toString());
 
          VendingMachineHotDrinks<HotDrinks> hd = new VendingMachineHotDrinks<>();
          List<HotDrinks> hotDrinksList = new ArrayList<>(Arrays.asList(new HotDrinks("chocolate", 50, 65),
